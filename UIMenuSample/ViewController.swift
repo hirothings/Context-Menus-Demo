@@ -41,4 +41,27 @@ extension ViewController: UICollectionViewDataSource, UICollectionViewDelegate {
         cell.setupImage(images[indexPath.row])
         return cell
     }
+    
+    func collectionView(_ collectionView: UICollectionView, contextMenuConfigurationForItemAt indexPath: IndexPath, point: CGPoint) -> UIContextMenuConfiguration? {
+        
+        let previewProvider: () -> PreviewViewController? = { [unowned self] in
+            return PreviewViewController(image: self.images[indexPath.row])
+        }
+        
+        let actionProvider: ([UIMenuElement<UIAction>]) -> UIMenu<UIAction>? = { _ in
+            let share = UIAction(__title: "Share", image: nil, options: .selected) { _ in
+                // no-op
+            }
+            let delete = UIAction(__title: "Delete", image: nil, options: .destructive) { _ in
+                // no-op
+            }
+            return UIMenu<UIAction>.create(title: "Edit", children: [share, delete])
+        }
+        
+        return UIContextMenuConfiguration(
+            identifier: nil,
+            previewProvider: previewProvider,
+            actionProvider: actionProvider
+        )
+    }
 }
