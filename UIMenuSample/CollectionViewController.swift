@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  CollectionViewController.swift
 //  UIMenuSample
 //
 //  Created by hirothings on 2019/06/17.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class CollectionViewController: UIViewController {
     @IBOutlet weak private var collectionView: UICollectionView!
     private let images: [UIImage] = [
         UIImage(named: "image1")!,
@@ -24,7 +24,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.title = "UIMenu sample"
+        self.title = "CollectionView with Preview"
         
         collectionView.dataSource = self
         collectionView.delegate = self
@@ -40,7 +40,7 @@ class ViewController: UIViewController {
     }
 }
 
-extension ViewController: UICollectionViewDataSource, UICollectionViewDelegate {
+extension CollectionViewController: UICollectionViewDataSource, UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return images.count
     }
@@ -52,7 +52,8 @@ extension ViewController: UICollectionViewDataSource, UICollectionViewDelegate {
         return cell
     }
     
-    func collectionView(_ collectionView: UICollectionView, contextMenuConfigurationForItemAt indexPath: IndexPath, point: CGPoint) -> UIContextMenuConfiguration? {
+    func collectionView(_ collectionView: UICollectionView, contextMenuConfigurationForItemAt
+        indexPath: IndexPath, point: CGPoint) -> UIContextMenuConfiguration? {
         
         let previewProvider: () -> PreviewViewController? = { [unowned self] in
             return PreviewViewController(image: self.images[indexPath.row])
@@ -60,14 +61,14 @@ extension ViewController: UICollectionViewDataSource, UICollectionViewDelegate {
         
         let actionProvider: ([UIMenuElement<UIAction>]) -> UIMenu<UIAction>? = { _ in
             let share = UIAction(__title: "Share", image: UIImage(systemName: "square.and.arrow.up")) { _ in
-                // no-op
+                // some action
             }
             let editMenu: UIMenu<UIAction> = {
                 let copy = UIAction(__title: "Copy", image: nil) { _ in
-                    // no-op
+                    // some action
                 }
                 let delete = UIAction(__title: "Delete", image: UIImage(systemName: "trash"), options: [.destructive]) { _ in
-                    // no-op
+                    // some action
                 }
                 return UIMenu<UIAction>.create(title: "Edit..", children: [copy, delete])
             }()
@@ -75,10 +76,8 @@ extension ViewController: UICollectionViewDataSource, UICollectionViewDelegate {
             return UIMenu<UIAction>.create(title: "Edit", children: [share, editMenu])
         }
         
-        return UIContextMenuConfiguration(
-            identifier: nil,
-            previewProvider: previewProvider,
-            actionProvider: actionProvider
-        )
+        return UIContextMenuConfiguration(identifier: nil,
+                                          previewProvider: previewProvider,
+                                          actionProvider: actionProvider)
     }
 }

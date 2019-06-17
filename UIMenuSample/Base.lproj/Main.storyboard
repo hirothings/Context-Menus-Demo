@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14810.11" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="cDi-bt-ZHy">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14810.11" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Drg-nI-hn6">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14766.13"/>
@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Collection View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="UIMenuSample" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="CollectionViewController" customModule="UIMenuSample" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -53,12 +53,13 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1047.8260869565217" y="120.53571428571428"/>
+            <point key="canvasLocation" x="1957.9710144927537" y="120.53571428571428"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--CollectionView-->
         <scene sceneID="tAA-M3-Iuq">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="cDi-bt-ZHy" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="CollectionView" image="circle.grid.3x3.fill" catalog="system" id="U4d-TP-2xz"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="UVB-5b-N4N">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -71,7 +72,79 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AFb-um-2dw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1047.8260869565217" y="120.53571428571428"/>
+        </scene>
+        <!--Sample View Controller-->
+        <scene sceneID="nlN-Xm-YO2">
+            <objects>
+                <viewController id="7zg-a0-zbn" customClass="SampleViewController" customModule="UIMenuSample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mAu-BN-yG2">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image1" translatesAutoresizingMaskIntoConstraints="NO" id="w6J-zH-Twx">
+                                <rect key="frame" x="16" y="288" width="382" height="320"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="w6J-zH-Twx" firstAttribute="centerY" secondItem="mAu-BN-yG2" secondAttribute="centerY" id="75A-Wc-TZA"/>
+                            <constraint firstItem="jXC-UI-2SP" firstAttribute="trailing" secondItem="w6J-zH-Twx" secondAttribute="trailing" constant="16" id="9nE-Er-9GM"/>
+                            <constraint firstItem="w6J-zH-Twx" firstAttribute="leading" secondItem="jXC-UI-2SP" secondAttribute="leading" constant="16" id="Maa-1v-AdO"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="jXC-UI-2SP"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="nDv-2b-KGp"/>
+                    <connections>
+                        <outlet property="imageView" destination="w6J-zH-Twx" id="2pm-z9-tMK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="seb-Zz-Dov" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1926" y="856"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="idr-zR-Lgf">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="Drg-nI-hn6" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Bj8-lB-wZG">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="cDi-bt-ZHy" kind="relationship" relationship="viewControllers" id="c9O-am-n9W"/>
+                        <segue destination="S7s-mr-pjo" kind="relationship" relationship="viewControllers" id="csd-ae-Fvl"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5kg-O9-FCt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
             <point key="canvasLocation" x="137.68115942028987" y="120.53571428571428"/>
         </scene>
+        <!--SimpleView-->
+        <scene sceneID="qgN-fx-a39">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="S7s-mr-pjo" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="SimpleView" image="grid" catalog="system" id="2B6-pN-5f2"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Hld-Lp-LdG">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="7zg-a0-zbn" kind="relationship" relationship="rootViewController" id="gR0-GM-xpE"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IHY-KC-2c7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1016" y="856"/>
+        </scene>
     </scenes>
+    <resources>
+        <image name="circle.grid.3x3.fill" catalog="system" width="64" height="54"/>
+        <image name="grid" catalog="system" width="64" height="56"/>
+        <image name="image1" width="213.33332824707031" height="320"/>
+    </resources>
 </document>

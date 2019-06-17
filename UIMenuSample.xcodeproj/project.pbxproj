@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		543F7FDF22B7841400F76A0A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 543F7FDE22B7841400F76A0A /* AppDelegate.swift */; };
 		543F7FE122B7841400F76A0A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 543F7FE022B7841400F76A0A /* SceneDelegate.swift */; };
-		543F7FE322B7841400F76A0A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 543F7FE222B7841400F76A0A /* ViewController.swift */; };
+		543F7FE322B7841400F76A0A /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 543F7FE222B7841400F76A0A /* CollectionViewController.swift */; };
 		543F7FE622B7841400F76A0A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 543F7FE422B7841400F76A0A /* Main.storyboard */; };
 		543F7FE822B7841800F76A0A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 543F7FE722B7841800F76A0A /* Assets.xcassets */; };
 		543F7FEB22B7841800F76A0A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 543F7FE922B7841800F76A0A /* LaunchScreen.storyboard */; };
@@ -17,13 +17,14 @@
 		543F7FF522B7860300F76A0A /* ImageCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 543F7FF322B7860300F76A0A /* ImageCollectionViewCell.xib */; };
 		543F7FF722B7876100F76A0A /* UICollectionView+EX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 543F7FF622B7876100F76A0A /* UICollectionView+EX.swift */; };
 		543F7FF922B7A46600F76A0A /* PreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 543F7FF822B7A46600F76A0A /* PreviewViewController.swift */; };
+		5485B21A22B8207B000F2F25 /* SampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5485B21922B8207B000F2F25 /* SampleViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		543F7FDB22B7841400F76A0A /* UIMenuSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UIMenuSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		543F7FDE22B7841400F76A0A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		543F7FE022B7841400F76A0A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		543F7FE222B7841400F76A0A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		543F7FE222B7841400F76A0A /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
 		543F7FE522B7841400F76A0A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		543F7FE722B7841800F76A0A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		543F7FEA22B7841800F76A0A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -32,6 +33,7 @@
 		543F7FF322B7860300F76A0A /* ImageCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageCollectionViewCell.xib; sourceTree = "<group>"; };
 		543F7FF622B7876100F76A0A /* UICollectionView+EX.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+EX.swift"; sourceTree = "<group>"; };
 		543F7FF822B7A46600F76A0A /* PreviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewViewController.swift; sourceTree = "<group>"; };
+		5485B21922B8207B000F2F25 /* SampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,17 +68,34 @@
 			children = (
 				543F7FDE22B7841400F76A0A /* AppDelegate.swift */,
 				543F7FE022B7841400F76A0A /* SceneDelegate.swift */,
-				543F7FE222B7841400F76A0A /* ViewController.swift */,
+				543F7FE222B7841400F76A0A /* CollectionViewController.swift */,
+				5485B21922B8207B000F2F25 /* SampleViewController.swift */,
 				543F7FF822B7A46600F76A0A /* PreviewViewController.swift */,
-				543F7FF622B7876100F76A0A /* UICollectionView+EX.swift */,
 				543F7FE422B7841400F76A0A /* Main.storyboard */,
 				543F7FE722B7841800F76A0A /* Assets.xcassets */,
 				543F7FE922B7841800F76A0A /* LaunchScreen.storyboard */,
 				543F7FEC22B7841800F76A0A /* Info.plist */,
+				5485B21D22B82110000F2F25 /* Extensions */,
+				5485B21B22B820F5000F2F25 /* Views */,
+			);
+			path = UIMenuSample;
+			sourceTree = "<group>";
+		};
+		5485B21B22B820F5000F2F25 /* Views */ = {
+			isa = PBXGroup;
+			children = (
 				543F7FF222B7860300F76A0A /* ImageCollectionViewCell.swift */,
 				543F7FF322B7860300F76A0A /* ImageCollectionViewCell.xib */,
 			);
-			path = UIMenuSample;
+			path = Views;
+			sourceTree = "<group>";
+		};
+		5485B21D22B82110000F2F25 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				543F7FF622B7876100F76A0A /* UICollectionView+EX.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -151,12 +170,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				543F7FE322B7841400F76A0A /* ViewController.swift in Sources */,
+				543F7FE322B7841400F76A0A /* CollectionViewController.swift in Sources */,
 				543F7FDF22B7841400F76A0A /* AppDelegate.swift in Sources */,
 				543F7FF722B7876100F76A0A /* UICollectionView+EX.swift in Sources */,
 				543F7FF422B7860300F76A0A /* ImageCollectionViewCell.swift in Sources */,
 				543F7FE122B7841400F76A0A /* SceneDelegate.swift in Sources */,
 				543F7FF922B7A46600F76A0A /* PreviewViewController.swift in Sources */,
+				5485B21A22B8207B000F2F25 /* SampleViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
