@@ -12,7 +12,13 @@ class ViewController: UIViewController {
     @IBOutlet weak private var collectionView: UICollectionView!
     private let images: [UIImage] = [
         UIImage(named: "image1")!,
-        UIImage(named: "image2")!
+        UIImage(named: "image2")!,
+        UIImage(named: "image3")!,
+        UIImage(named: "image4")!,
+        UIImage(named: "image5")!,
+        UIImage(named: "image6")!,
+        UIImage(named: "image7")!,
+        UIImage(named: "image8")!
     ]
     
     override func viewDidLoad() {
@@ -26,7 +32,8 @@ class ViewController: UIViewController {
         flowLayout.scrollDirection = .vertical
         flowLayout.minimumLineSpacing = 0
         flowLayout.minimumInteritemSpacing = 0
-        flowLayout.itemSize = CGSize(width: 103.5, height: 103.5)
+        let width = self.view.bounds.width / 2
+        flowLayout.itemSize = CGSize(width: width, height: width)
         collectionView.collectionViewLayout = flowLayout
     }
 }
