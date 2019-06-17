@@ -24,6 +24,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.title = "UIMenu sample"
+        
         collectionView.dataSource = self
         collectionView.delegate = self
         collectionView.register(cellType: ImageCollectionViewCell.self)
@@ -45,7 +47,8 @@ extension ViewController: UICollectionViewDataSource, UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(with: ImageCollectionViewCell.self, for: indexPath)
-        cell.setupImage(images[indexPath.row])
+        let width = self.view.bounds.width
+        cell.setupImage(images[indexPath.row], size: CGSize(width: width, height: width))
         return cell
     }
     

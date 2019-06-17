@@ -15,8 +15,8 @@ class ImageCollectionViewCell: UICollectionViewCell {
         super.awakeFromNib()
     }
     
-    func setupImage(_ image: UIImage) {
-        let cropImage = cropToBounds(image: image, width: 64, height: 64)
+    func setupImage(_ image: UIImage, size: CGSize) {
+        let cropImage = cropToBounds(image: image, width: Double(size.width), height: Double(size.height))
         imageView.image = cropImage
     }
     
