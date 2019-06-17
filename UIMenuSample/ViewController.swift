@@ -56,13 +56,20 @@ extension ViewController: UICollectionViewDataSource, UICollectionViewDelegate {
         }
         
         let actionProvider: ([UIMenuElement<UIAction>]) -> UIMenu<UIAction>? = { _ in
-            let share = UIAction(__title: "Share", image: nil, options: .disabled) { _ in
+            let share = UIAction(__title: "Share", image: UIImage(systemName: "square.and.arrow.up")) { _ in
                 // no-op
             }
-            let delete = UIAction(__title: "Delete", image: nil, options: .destructive) { _ in
-                // no-op
-            }
-            return UIMenu<UIAction>.create(title: "Edit", children: [share, delete])
+            let editMenu: UIMenu<UIAction> = {
+                let copy = UIAction(__title: "Copy", image: nil) { _ in
+                    // no-op
+                }
+                let delete = UIAction(__title: "Delete", image: UIImage(systemName: "trash"), options: [.destructive]) { _ in
+                    // no-op
+                }
+                return UIMenu<UIAction>.create(title: "Edit..", children: [copy, delete])
+            }()
+
+            return UIMenu<UIAction>.create(title: "Edit", children: [share, editMenu])
         }
         
         return UIContextMenuConfiguration(
