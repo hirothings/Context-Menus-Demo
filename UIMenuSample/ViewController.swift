@@ -56,7 +56,7 @@ extension ViewController: UICollectionViewDataSource, UICollectionViewDelegate {
         }
         
         let actionProvider: ([UIMenuElement<UIAction>]) -> UIMenu<UIAction>? = { _ in
-            let share = UIAction(__title: "Share", image: nil, options: .selected) { _ in
+            let share = UIAction(__title: "Share", image: nil, options: .disabled) { _ in
                 // no-op
             }
             let delete = UIAction(__title: "Delete", image: nil, options: .destructive) { _ in
