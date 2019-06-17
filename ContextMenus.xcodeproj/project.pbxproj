@@ -21,7 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		543F7FDB22B7841400F76A0A /* UIMenuSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UIMenuSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		543F7FDB22B7841400F76A0A /* ContextMenus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ContextMenus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		543F7FDE22B7841400F76A0A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		543F7FE022B7841400F76A0A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		543F7FE222B7841400F76A0A /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
@@ -50,7 +50,7 @@
 		543F7FD222B7841400F76A0A = {
 			isa = PBXGroup;
 			children = (
-				543F7FDD22B7841400F76A0A /* UIMenuSample */,
+				543F7FDD22B7841400F76A0A /* ContextMenusSample */,
 				543F7FDC22B7841400F76A0A /* Products */,
 			);
 			sourceTree = "<group>";
@@ -58,12 +58,12 @@
 		543F7FDC22B7841400F76A0A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				543F7FDB22B7841400F76A0A /* UIMenuSample.app */,
+				543F7FDB22B7841400F76A0A /* ContextMenus.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		543F7FDD22B7841400F76A0A /* UIMenuSample */ = {
+		543F7FDD22B7841400F76A0A /* ContextMenusSample */ = {
 			isa = PBXGroup;
 			children = (
 				543F7FDE22B7841400F76A0A /* AppDelegate.swift */,
@@ -78,7 +78,7 @@
 				5485B21D22B82110000F2F25 /* Extensions */,
 				5485B21B22B820F5000F2F25 /* Views */,
 			);
-			path = UIMenuSample;
+			path = ContextMenusSample;
 			sourceTree = "<group>";
 		};
 		5485B21B22B820F5000F2F25 /* Views */ = {
@@ -101,9 +101,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		543F7FDA22B7841400F76A0A /* UIMenuSample */ = {
+		543F7FDA22B7841400F76A0A /* ContextMenus */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 543F7FEF22B7841800F76A0A /* Build configuration list for PBXNativeTarget "UIMenuSample" */;
+			buildConfigurationList = 543F7FEF22B7841800F76A0A /* Build configuration list for PBXNativeTarget "ContextMenus" */;
 			buildPhases = (
 				543F7FD722B7841400F76A0A /* Sources */,
 				543F7FD822B7841400F76A0A /* Frameworks */,
@@ -113,9 +113,9 @@
 			);
 			dependencies = (
 			);
-			name = UIMenuSample;
+			name = ContextMenus;
 			productName = UIMenuSample;
-			productReference = 543F7FDB22B7841400F76A0A /* UIMenuSample.app */;
+			productReference = 543F7FDB22B7841400F76A0A /* ContextMenus.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -133,7 +133,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 543F7FD622B7841400F76A0A /* Build configuration list for PBXProject "UIMenuSample" */;
+			buildConfigurationList = 543F7FD622B7841400F76A0A /* Build configuration list for PBXProject "ContextMenus" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -146,7 +146,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				543F7FDA22B7841400F76A0A /* UIMenuSample */,
+				543F7FDA22B7841400F76A0A /* ContextMenus */,
 			);
 		};
 /* End PBXProject section */
@@ -322,12 +322,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = G6788ACX5G;
-				INFOPLIST_FILE = UIMenuSample/Info.plist;
+				INFOPLIST_FILE = ContextMenusSample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = hirothings.UIMenuSample;
+				PRODUCT_BUNDLE_IDENTIFIER = hirothings.ContextMenus;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -340,12 +340,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = G6788ACX5G;
-				INFOPLIST_FILE = UIMenuSample/Info.plist;
+				INFOPLIST_FILE = ContextMenusSample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = hirothings.UIMenuSample;
+				PRODUCT_BUNDLE_IDENTIFIER = hirothings.ContextMenus;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -355,7 +355,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		543F7FD622B7841400F76A0A /* Build configuration list for PBXProject "UIMenuSample" */ = {
+		543F7FD622B7841400F76A0A /* Build configuration list for PBXProject "ContextMenus" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				543F7FED22B7841800F76A0A /* Debug */,
@@ -364,7 +364,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		543F7FEF22B7841800F76A0A /* Build configuration list for PBXNativeTarget "UIMenuSample" */ = {
+		543F7FEF22B7841800F76A0A /* Build configuration list for PBXNativeTarget "ContextMenus" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				543F7FF022B7841800F76A0A /* Debug */,
