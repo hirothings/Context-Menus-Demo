@@ -1,6 +1,6 @@
 //
 //  ImageCollectionViewCell.swift
-//  UIMenuSample
+//  ContextMenusSample
 //
 //  Created by hirothings on 2019/06/17.
 //  Copyright © 2019 hirothings. All rights reserved.
@@ -19,9 +19,7 @@ class ImageCollectionViewCell: UICollectionViewCell {
         let cropImage = cropToBounds(image: image, width: Double(size.width), height: Double(size.height))
         imageView.image = cropImage
     }
-    
-    
-    // Ref: https://stackoverflow.com/questions/32041420/cropping-image-with-swift-and-put-it-on-center-position
+
     private func cropToBounds(image: UIImage, width: Double, height: Double) -> UIImage {
         let cgimage = image.cgImage!
         let contextImage: UIImage = UIImage(cgImage: cgimage)
@@ -31,7 +29,6 @@ class ImageCollectionViewCell: UICollectionViewCell {
         var cgwidth: CGFloat = CGFloat(width)
         var cgheight: CGFloat = CGFloat(height)
         
-        // See what size is longer and create the center off of that
         if contextSize.width > contextSize.height {
             posX = ((contextSize.width - contextSize.height) / 2)
             posY = 0
@@ -46,10 +43,7 @@ class ImageCollectionViewCell: UICollectionViewCell {
         
         let rect: CGRect = CGRect(x: posX, y: posY, width: cgwidth, height: cgheight)
         
-        // Create bitmap image from context using the rect
         let imageRef: CGImage = cgimage.cropping(to: rect)!
-        
-        // Create a new image based on the imageRef and rotate back to the original orientation
         let image: UIImage = UIImage(cgImage: imageRef, scale: image.scale, orientation: image.imageOrientation)
         
         return image
