@@ -1,5 +1,5 @@
-# Context Menus Sample (iOS13)
-Context Menus implementation samples
+# Context Menus Demo (iOS13)
+Context Menus implementation demos
 
 1. CollectionView + Context Menus with preview
 2. Simple View + Context Menus
@@ -18,6 +18,8 @@ https://developer.apple.com/videos/play/wwdc2019/224/
 
 Human Interface Guidelines  
 https://developer.apple.com/design/human-interface-guidelines/ios/controls/context-menus/
+
+photos from https://unsplash.com/
 
 ## Requirements
 * Xcode 11 beta
