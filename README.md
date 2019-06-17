@@ -8,9 +8,9 @@ Context Menus implementation demos
 - [x] Complex hierarchies
 - [x] Nested sub-menus
 
-| Base CollectionView     | Context Menus with preview     |
-| :------------- | :------------- |
-| ![IMG_0D33F0248C3F-1](https://user-images.githubusercontent.com/5630896/59634710-5fc87d80-918a-11e9-88d8-a887d3ec8864.jpeg)| ![IMG_23E479E7AD04-1](https://user-images.githubusercontent.com/5630896/59634906-c9e12280-918a-11e9-8146-d51e83cdc3a6.jpeg)      |
+![image](https://user-images.githubusercontent.com/5630896/59643647-71b71a00-91a4-11e9-9e5d-d8c894ca5b53.png)
+
+> Context Menus image (WWDC Slide)
 
 ## References
 official video [Modernizing Your UI for iOS 13]  
