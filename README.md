@@ -22,5 +22,5 @@ https://developer.apple.com/design/human-interface-guidelines/ios/controls/conte
 photos from https://unsplash.com/
 
 ## Requirements
-* Xcode 11 beta
+* Xcode 11 beta 2
 * iOS 13.0 beta

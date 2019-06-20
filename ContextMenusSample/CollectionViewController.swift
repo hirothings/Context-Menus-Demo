@@ -59,21 +59,21 @@ extension CollectionViewController: UICollectionViewDataSource, UICollectionView
             return PreviewViewController(image: self.images[indexPath.row])
         }
         
-        let actionProvider: ([UIMenuElement<UIAction>]) -> UIMenu<UIAction>? = { _ in
+        let actionProvider: ([UIMenuElement]) -> UIMenu? = { _ in
             let share = UIAction(__title: "Share", image: UIImage(systemName: "square.and.arrow.up")) { _ in
                 // some action
             }
-            let editMenu: UIMenu<UIAction> = {
+            let editMenu: UIMenu = {
                 let copy = UIAction(__title: "Copy", image: nil) { _ in
                     // some action
                 }
                 let delete = UIAction(__title: "Delete", image: UIImage(systemName: "trash"), options: [.destructive]) { _ in
                     // some action
                 }
-                return UIMenu<UIAction>.create(title: "Edit..", children: [copy, delete])
+                return UIMenu(__title: "Edit..", image: nil, identifier: nil, children: [copy, delete])
             }()
-
-            return UIMenu<UIAction>.create(title: "Edit", children: [share, editMenu])
+            
+            return UIMenu(__title: "Edit..", image: nil, identifier: nil, children: [share, editMenu])
         }
         
         return UIContextMenuConfiguration(identifier: nil,
