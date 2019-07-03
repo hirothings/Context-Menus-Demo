@@ -60,16 +60,17 @@ extension CollectionViewController: UICollectionViewDataSource, UICollectionView
         }
         
         let actionProvider: ([UIMenuElement]) -> UIMenu? = { _ in
-            let share = UIAction(__title: "Share", image: UIImage(systemName: "square.and.arrow.up")) { _ in
+            let share = UIAction(__title: "Share", image: UIImage(systemName: "square.and.arrow.up"), identifier: UIAction.Identifier(rawValue: "share")) { _ in
                 // some action
             }
             let editMenu: UIMenu = {
-                let copy = UIAction(__title: "Copy", image: nil) { _ in
+                let copy = UIAction(__title: "Copy", image: nil, identifier: UIAction.Identifier(rawValue: "copy")) { _ in
                     // some action
                 }
-                let delete = UIAction(__title: "Delete", image: UIImage(systemName: "trash"), options: [.destructive]) { _ in
+                let delete = UIAction(__title: "Delete", image: UIImage(systemName: "trash"), identifier: UIAction.Identifier(rawValue: "delete")) { _ in
                     // some action
                 }
+                delete.attributes = [.destructive]
                 return UIMenu(__title: "Edit..", image: nil, identifier: nil, children: [copy, delete])
             }()
             
