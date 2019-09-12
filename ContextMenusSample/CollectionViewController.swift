@@ -64,10 +64,10 @@ extension CollectionViewController: UICollectionViewDataSource, UICollectionView
                 // some action
             }
             let editMenu: UIMenu = {
-                let copy = UIAction(title: "Copy", image: nil, identifier: UIAction.Identifier(rawValue: "copy")) { _ in
+                let copy = UIAction(title: "Copy") { _ in
                     // some action
                 }
-                let delete = UIAction(title: "Delete", image: UIImage(systemName: "trash"), identifier: UIAction.Identifier(rawValue: "delete")) { _ in
+                let delete = UIAction(title: "Delete") { _ in
                     // some action
                 }
                 delete.attributes = [.destructive]
